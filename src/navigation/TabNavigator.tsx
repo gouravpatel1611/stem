@@ -13,7 +13,9 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
     <Tab.Navigator
+    
       screenOptions={({ route }) => ({
+        headerShown: false,
         tabBarLabelStyle: {
           fontSize: 16,
           fontWeight: 'bold',
@@ -42,6 +44,8 @@ const TabNavigator = () => {
             default:
               iconName = 'alert-circle-outline';
           }
+
+          
 
           return <Ionicons name={iconName } size={size} color={color} />;
         },
